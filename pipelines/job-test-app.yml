@@ -1,6 +1,6 @@
 jobs:
-- job: BuildNodeFunctions
-  displayName: Build Node Functions
+- job: TestAppModules
+  displayName: Test App Modules
 
   variables:
   - name: NODE_CODE_PATH
@@ -21,7 +21,7 @@ jobs:
     workingDirectory: $(NODE_CODE_PATH)
   
   - script: npm test
-    displayName: Run linting unit tests coverage
+    displayName: Run jest tests with coverage
     workingDirectory: $(NODE_CODE_PATH)
 
   - task: PublishTestResults@2
