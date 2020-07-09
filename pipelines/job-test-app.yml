@@ -1,0 +1,39 @@
+jobs:
+- job: BuildNodeFunctions
+  displayName: Build Node Functions
+
+  variables:
+  - name: NODE_CODE_PATH
+    value: $(Build.SourcesDirectory)/src
+  - name: TEST_RESULTS_PATH
+    value: $(Build.SourcesDirectory)/junit.xml
+  - name: COVERAGE_PATH
+    value: $(Build.SourcesDirectory)/coverage/cobertura-coverage.xml
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '12.x'
+    displayName: Install Node
+  
+  - script: npm install
+    displayName: Restore npm modules
+    workingDirectory: $(NODE_CODE_PATH)
+  
+  - script: npm test
+    displayName: Run linting unit tests coverage
+    workingDirectory: $(NODE_CODE_PATH)
+
+  - task: PublishTestResults@2
+    condition: succeededOrFailed()
+    displayName: Publish unit test results
+    inputs:
+      testRunTitle: Node Unit Test Results
+      testResultsFormat: JUnit
+      testResultsFiles: $(TEST_RESULTS_PATH)
+
+  - task: PublishCodeCoverageResults@1
+    displayName: Publish unit test code coverage
+    inputs: 
+      codeCoverageTool: Cobertura
+      summaryFileLocation: $(COVERAGE_PATH)

@@ -1,0 +1,32 @@
+{
+    "name": "jest-babel-playground",
+    "version": "1.0.0",
+    "author": "Miroslaw Majka",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/miroslawmajka/jest-babel-playground/issues"
+    },
+    "homepage": "https://github.com/miroslawmajka/jest-babel-playground#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/miroslawmajka/jest-babel-playground.git"
+    },
+    "keywords": [
+        "jest",
+        "babel",
+        "pipelines",
+        "azure",
+        "devops"
+    ],
+    "scripts": {
+        "test": "jest --config jest.config.js"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.4",
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "babel-jest": "^26.1.0",
+        "jest": "^26.1.0",
+        "jest-junit": "^11.0.1"
+    }
+}
