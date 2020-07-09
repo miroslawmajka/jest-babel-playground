@@ -3,18 +3,13 @@ jobs:
   displayName: Test App Modules
 
   variables:
-  - name: NODE_CODE_PATH
-    value: $(Build.SourcesDirectory)/src
   - name: TEST_RESULTS_PATH
     value: $(Build.SourcesDirectory)/junit.xml
   - name: COVERAGE_PATH
     value: $(Build.SourcesDirectory)/coverage/cobertura-coverage.xml
 
   steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '12.x'
-    displayName: Install Node
+  - template: step-install-node.yml
   
   - script: npm install
     displayName: Restore npm modules
@@ -37,3 +32,4 @@ jobs:
     inputs: 
       codeCoverageTool: Cobertura
       summaryFileLocation: $(COVERAGE_PATH)
+      
