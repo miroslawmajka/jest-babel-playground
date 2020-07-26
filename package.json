@@ -20,7 +20,7 @@
     ],
     "scripts": {
         "test": "jest --config jest.config.js",
-        "start": "babel-node app.js"
+        "start": "babel-node src/app.js"
     },
     "dependencies": {
         "@babel/cli": "^7.10.4",
