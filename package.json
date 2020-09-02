@@ -23,14 +23,14 @@
         "start": "babel-node src/app.js"
     },
     "dependencies": {
-        "@babel/cli": "^7.10.4",
-        "@babel/core": "^7.10.4",
-        "@babel/node": "^7.10.4",
-        "@babel/preset-env": "^7.10.4"
+        "@babel/cli": "^7.11.5",
+        "@babel/core": "^7.11.5",
+        "@babel/node": "^7.10.5",
+        "@babel/preset-env": "^7.11.5"
     },
     "devDependencies": {
-        "babel-jest": "^26.1.0",
-        "jest": "^26.1.0",
-        "jest-junit": "^11.0.1"
+        "babel-jest": "^26.3.0",
+        "jest": "^26.4.2",
+        "jest-junit": "^11.1.0"
     }
 }
