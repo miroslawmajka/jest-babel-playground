@@ -1,36 +1,34 @@
 {
-    "name": "jest-babel-playground",
-    "version": "1.0.0",
-    "author": "Miroslaw Majka",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/miroslawmajka/jest-babel-playground/issues"
-    },
-    "homepage": "https://github.com/miroslawmajka/jest-babel-playground#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/miroslawmajka/jest-babel-playground.git"
-    },
-    "keywords": [
-        "jest",
-        "babel",
-        "pipelines",
-        "azure",
-        "devops"
-    ],
-    "scripts": {
-        "test": "jest --config jest.config.js",
-        "start": "babel-node src/app.js"
-    },
-    "dependencies": {
-        "@babel/cli": "^7.11.5",
-        "@babel/core": "^7.11.5",
-        "@babel/node": "^7.10.5",
-        "@babel/preset-env": "^7.11.5"
-    },
-    "devDependencies": {
-        "babel-jest": "^26.3.0",
-        "jest": "^26.4.2",
-        "jest-junit": "^11.1.0"
-    }
+  "name": "jest-babel-playground",
+  "version": "1.0.0",
+  "author": "Miroslaw Majka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miroslawmajka/jest-babel-playground/issues"
+  },
+  "homepage": "https://github.com/miroslawmajka/jest-babel-playground#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miroslawmajka/jest-babel-playground.git"
+  },
+  "keywords": [
+    "jest",
+    "babel",
+    "pipelines",
+    "azure",
+    "devops"
+  ],
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "start": "babel-node src/app.js"
+  },
+  "dependencies": {
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "jest-junit": "^11.1.0",
+    "prettier": "^2.2.1"
+  }
 }
